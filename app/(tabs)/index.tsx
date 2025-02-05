@@ -1,4 +1,4 @@
-import { Image, Platform } from "react-native";
+import { Image, Platform, View, Text } from "react-native";
 import "../../globals.css";
 import { HelloWave } from "@/components/HelloWave";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
@@ -16,46 +16,54 @@ export default function HomeScreen() {
         />
       }
     >
+      {/* Header Section */}
       <ThemedView className="flex flex-row items-center gap-2">
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
       </ThemedView>
 
+      {/* Steps */}
       <ThemedView className="gap-2 mb-2">
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit{" "}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>{" "}
-          to see changes. Press{" "}
-          <ThemedText type="defaultSemiBold">
+        <Text className="text-lg font-rubikBold text-white">
+          Step 1: Try it
+        </Text>
+        <Text className="text-base font-rubikRegular text-white">
+          Edit <Text className="font-rubikBold">app/(tabs)/index.tsx</Text> to
+          see changes. Press{" "}
+          <Text className="font-rubikBold">
             {Platform.select({
               ios: "cmd + d",
               android: "cmd + m",
               web: "F12",
             })}
-          </ThemedText>{" "}
+          </Text>{" "}
           to open developer tools.
-        </ThemedText>
+        </Text>
       </ThemedView>
 
       <ThemedView className="gap-2 mb-2">
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
+        <Text className="text-lg font-rubikBold text-white">
+          Step 2: Explore
+        </Text>
+        <Text className="text-base font-rubikExtrabold text-white">
           Tap the Explore tab to learn more about what's included in this
           starter app.
-        </ThemedText>
+        </Text>
       </ThemedView>
 
       <ThemedView className="gap-2 mb-2">
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
+        <Text className="text-lg font-rubikBold text-white">
+          Step 3: Get a fresh start
+        </Text>
+        <Text className="text-base font-rubikRegular text-white">
           When you're ready, run{" "}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText>{" "}
-          to get a fresh <ThemedText type="defaultSemiBold">app</ThemedText>{" "}
-          directory. This will move the current{" "}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{" "}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
+          <Text className="font-rubikBold">npm run reset-project</Text> to get a
+          fresh
+          <Text className="font-rubikBold"> app</Text> directory. This will move
+          the current
+          <Text className="font-rubikBold"> app</Text> to
+          <Text className="font-rubikBold"> app-example</Text>.
+        </Text>
       </ThemedView>
     </ParallaxScrollView>
   );
