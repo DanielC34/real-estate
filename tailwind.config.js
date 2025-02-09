@@ -14,6 +14,10 @@ module.exports = {
         rubikSemibold: ["Rubik-SemiBold", "sans-serif"],
         rubikExtrabold: ["Rubik-ExtraBold", "sans-serif"],
       },
+      fontSize: {
+        header: "32px",
+        subheader: "18px"
+      },
       colors: {
         primary: {
           4: "rgba(0, 97, 255, 0.04)", // 4% opacity
