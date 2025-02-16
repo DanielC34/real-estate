@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/images/MoveScout-logo-2.png",
     "scheme": "movestate",
+    "platform": ["ios", "web", "android"],
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
